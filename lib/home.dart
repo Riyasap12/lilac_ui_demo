@@ -86,69 +86,146 @@ class _MyHomePageState extends State<MyHomePage> {
                 Padding(
                   padding: EdgeInsets.only(top: 24),
                   child: Container(
-                      height: 132,
-                      width: 349,
-                      child: Stack(
-                        fit: StackFit.passthrough,
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(14),
-                            child: Image.asset(
-                              'assets/img_1.png',
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(
-                              left: 32,
-                              top: 32,
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                    height: 135,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                        shrinkWrap: true,
+                        physics: AlwaysScrollableScrollPhysics(),
+                      children: [
+                        Container(
+                            height: 132,
+                            width: 349,
+                            child: Stack(
+                              fit: StackFit.passthrough,
                               children: [
-                                Container(
-                                  width: 121,
-                                  height: 42,
-                                  child: Text('Introducing\nFree Cancellation',
-                                      style: GoogleFonts.playfairDisplay(
-                                          textStyle: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 14,
-                                        color: Colors.tealAccent[700],
-                                      ))),
-                                ),
-                                Container(
-                                  height: 12,
-                                  width: 115,
-                                  child: Text(
-                                    'On your hotel bookings',
-                                    style: GoogleFonts.poppins(
-                                        textStyle: TextStyle(
-                                            fontSize: 10, color: Colors.white)),
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(14),
+                                  child: Image.asset(
+                                    'assets/img_1.png',
+                                    fit: BoxFit.fill,
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(top: 5),
-                                  child: Row(
+                                  padding: EdgeInsets.only(
+                                    left: 32,
+                                    top: 32,
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       Container(
-                                        height: 2,
-                                        width: 18,
-                                        color: Colors.tealAccent[700],
+                                        width: 121,
+                                        height: 42,
+                                        child: Text('Introducing\nFree Cancellation',
+                                            style: GoogleFonts.playfairDisplay(
+                                                textStyle: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 14,
+                                              color: Colors.tealAccent[700],
+                                            ))),
                                       ),
                                       Container(
-                                        height: 2,
-                                        width: 18,
-                                        color: Colors.white,
+                                        height: 12,
+                                        width: 115,
+                                        child: Text(
+                                          'On your hotel bookings',
+                                          style: GoogleFonts.poppins(
+                                              textStyle: TextStyle(
+                                                  fontSize: 10, color: Colors.white)),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 5),
+                                        child: Row(
+                                          children: [
+                                            Container(
+                                              height: 2,
+                                              width: 18,
+                                              color: Colors.tealAccent[700],
+                                            ),
+                                            Container(
+                                              height: 2,
+                                              width: 18,
+                                              color: Colors.white,
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ],
                                   ),
                                 ),
                               ],
-                            ),
-                          ),
-                        ],
-                      )),
+                            )),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 16),
+                          child: Container(
+                              height: 132,
+                              width: 349,
+                              child: Stack(
+                                fit: StackFit.passthrough,
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(14),
+                                    child: Image.asset(
+                                      'assets/img_1.png',
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.only(
+                                      left: 32,
+                                      top: 32,
+                                    ),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Container(
+                                          width: 121,
+                                          height: 42,
+                                          child: Text('Introducing\nFree Cancellation',
+                                              style: GoogleFonts.playfairDisplay(
+                                                  textStyle: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 14,
+                                                    color: Colors.tealAccent[700],
+                                                  ))),
+                                        ),
+                                        Container(
+                                          height: 12,
+                                          width: 115,
+                                          child: Text(
+                                            'On your hotel bookings',
+                                            style: GoogleFonts.poppins(
+                                                textStyle: TextStyle(
+                                                    fontSize: 10, color: Colors.white)),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(top: 5),
+                                          child: Row(
+                                            children: [
+                                              Container(
+                                                height: 2,
+                                                width: 18,
+                                                color: Colors.tealAccent[700],
+                                              ),
+                                              Container(
+                                                height: 2,
+                                                width: 18,
+                                                color: Colors.white,
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              )),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 16, left: 152),
@@ -496,7 +573,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     height: 220,
                     child: ListView(
                       shrinkWrap: true,
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: AlwaysScrollableScrollPhysics(),
                       scrollDirection: Axis.horizontal,
                       children: [
                         Container(
@@ -945,7 +1022,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     height: 220,
                     child: ListView(
                       shrinkWrap: true,
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: AlwaysScrollableScrollPhysics(),
                       scrollDirection: Axis.horizontal,
                       children: [
                         Container(
@@ -1521,7 +1598,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       height: 131,
                       child: ListView(
                           shrinkWrap: true,
-                          physics: NeverScrollableScrollPhysics(),
+                          physics: AlwaysScrollableScrollPhysics(),
                           scrollDirection: Axis.horizontal,
                           children: [
 
@@ -1720,7 +1797,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     height: 220,
                     child: ListView(
                       shrinkWrap: true,
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: AlwaysScrollableScrollPhysics(),
                       scrollDirection: Axis.horizontal,
                       children: [
                         Container(
@@ -2257,7 +2334,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     height: 131,
                     child: ListView(
                         shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: AlwaysScrollableScrollPhysics(),
                         scrollDirection: Axis.horizontal,
                         children: [
 
@@ -2458,7 +2535,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     height: 220,
                     child: ListView(
                       shrinkWrap: true,
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: AlwaysScrollableScrollPhysics(),
                       scrollDirection: Axis.horizontal,
                       children: [
                         Container(
@@ -2996,7 +3073,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     height: 131,
                     child: ListView(
                         shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: AlwaysScrollableScrollPhysics(),
                         scrollDirection: Axis.horizontal,
                         children: [
 
